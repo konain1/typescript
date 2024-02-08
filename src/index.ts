@@ -104,3 +104,20 @@ function randomShape(shape:shape){
     console.log(shape)
 }
 randomShape({radius:4})
+
+enum Arithmetic {
+    Add,
+    Sub
+}
+
+function whichCal(a: number, operation: Arithmetic): number {
+    if (operation === Arithmetic.Add) {
+        return a + 1;
+    } else if (operation === Arithmetic.Sub) {
+        return a - 1;
+    }
+
+    return -1;
+}
+
+console.log(whichCal(2, Arithmetic.Add));
