@@ -47,7 +47,17 @@ interface PersonInterface{
     age:number;
     greet():string
 }
+type persontype = {
+    name:string,
+    age:number
+}
 
+function greetuser(user:persontype){
+    return `hi ${user.name}`
+}
+
+const ans = greetuser({name:'konain',age:30})
+console.log(ans)
 
 class Person  implements PersonInterface{
 
@@ -73,3 +83,24 @@ console.log(personObject)
 // }
 
 // console.log(greet({name:"konain",age:21}))
+
+
+type shape = rectengle | circle | square;
+
+interface rectengle{
+    width:number;
+    height:number;
+}
+
+interface square{
+    side:number;
+}
+
+interface circle{
+    radius:number;
+}
+
+function randomShape(shape:shape){
+    console.log(shape)
+}
+randomShape({radius:4})
